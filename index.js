@@ -13,6 +13,14 @@ const userRoutes = require("./routes/user");
 const app = express();
 dotenv.config();
 
+// cors
+const cors = require("cors");
+app.use(
+     cors({
+          origin: "*",
+     })
+);
+
 // middleware
 // this will parse the request body and add it to req.body
 app.use(express.json());
