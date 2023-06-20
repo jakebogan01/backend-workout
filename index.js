@@ -1,7 +1,7 @@
 // Purpose: server for the backend
 
 // Load environment variables
-require("dotenv").config();
+const dotenv = require("dotenv");
 // Initialize express
 const express = require("express");
 // Initialize mongoose
@@ -11,6 +11,7 @@ const workoutRoutes = require("./routes/workouts");
 const userRoutes = require("./routes/user");
 // express app
 const app = express();
+dotenv.config();
 
 // middleware
 // this will parse the request body and add it to req.body
